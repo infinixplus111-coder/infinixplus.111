@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfinixPlus+ | Premium Loan Solutions in Singapore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #2D1B69;
+            --primary-light: #6B46C1;
+            --accent: #FF6B35;
+            --accent-light: #FF9F68;
+            --accent-glow: #FF8C42;
+            --dark: #0A0A0A;
+            --darker: #050505;
+            --light: #F5F5F5;
+            --gray: #6C757D;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--darker), #1a1a2e);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--dark), #1a1a2e);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        
+        .logo-text {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-infinix {
+            color: #8B5CF6; /* Purple color */
+        }
+        
+        .logo-plus {
+            color: white;
+        }
+        
+        .logo-circle {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent-glow));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.6), 0 0 20px rgba(255, 140, 66, 0.4);
+            position: relative;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        
+        .logo-circle::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        nav a:hover {
+            color: var(--accent-light);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(20, 20, 30, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(30, 30, 40, 0.3));
+            z-index: 0;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            color: #e0e0ff;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.6);
+        }
+        
+        .btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #fff, #b8b8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 3px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #b8b8ff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Features */
+        .features {
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, rgba(45, 27, 105, 0.3), rgba(74, 47, 163, 0.2));
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 35px rgba(45, 27, 105, 0.4);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1.2rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .feature-card p {
+            color: #b8b8ff;
+            font-size: 1.05rem;
+        }
+        
+        /* Loan Products */
+        .products {
+            background: linear-gradient(135deg, #1a1a2e, #0f0f23);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .product-card {
+            background: linear-gradient(135deg, rgba(45, 27, 105, 0.4), rgba(10, 10, 10, 0.6));
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(45, 27, 105, 0.5);
+        }
+        
+        .product-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .product-card h3 {
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            color: white;
+        }
+        
+        .product-details {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+        
+        .product-details ul {
+            list-style: none;
+        }
+        
+        .product-details li {
+            margin-bottom: 0.8rem;
+            color: #b8b8ff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .product-details li i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Loan Calculator */
+        .calculator {
+            background: linear-gradient(135deg, var(--dark), #1a1a2e);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .calculator::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .calculator-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #333;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.3);
+        }
+        
+        .form-control::placeholder {
+            color: #888;
+        }
+        
+        .range-value {
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-top: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .calculator-result {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(10, 10, 10, 0.7);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .result-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 1.5rem 0;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .result-details {
+            margin: 1.5rem 0;
+        }
+        
+        .result-details p {
+            margin-bottom: 0.8rem;
+            color: #b8b8ff;
+            font-size: 1.1rem;
+        }
+        
+        .result-details span {
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Application Form */
+        .application {
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+        }
+        
+        .application-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .application-form .form-group label {
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .application-form .form-control {
+            background: white;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .application-form .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #1a1a2e, #0f0f23);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(45, 27, 105, 0.3), rgba(10, 10, 10, 0.6));
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.8rem;
+            font-style: italic;
+            color: #e0e0ff;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h4 {
+            color: white;
+            margin-bottom: 0.3rem;
+        }
+        
+        .author-info p {
+            color: #b8b8ff;
+            font-size: 0.95rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark), #0a0a15);
+            color: white;
+            padding: 5rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.8rem;
+            position: relative;
+            padding-bottom: 12px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.9rem;
+        }
+        
+        .footer-column a {
+            color: #b8b8ff;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent-light);
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            color: #b8b8ff;
+        }
+        
+        .contact-info i {
+            color: var(--accent);
+            width: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .calculator-container,
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(135deg, var(--dark), #1a1a2e);
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero {
+                padding: 5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            .application-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-circle">IP+</div>
+                <div class="logo-text">
+                    <span class="logo-infinix">Infinix</span>
+                    <span class="logo-plus">Plus+</span>
+                </div>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Loan Products</a></li>
+                    <li><a href="#calculator">Calculator</a></li>
+                    <li><a href="#application">Apply Now</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Premium Financial Solutions for Singapore's Future</h1>
+            <p>InfinixPlus+ offers tailored loan options for individuals and businesses with industry-leading rates, lightning-fast approvals, and personalized service that puts you first.</p>
+            <a href="#application" class="btn">Apply For Loan Today</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose InfinixPlus+</h2>
+                <p>Experience financial services redefined with our customer-centric approach</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning-Fast Approval</h3>
+                    <p>Get your loan approved within 4-6 hours with our fully digital application process. No lengthy paperwork, no unnecessary delays.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Unbeatable Rates</h3>
+                    <p>Enjoy Singapore's most competitive interest rates starting from just 3.8% p.a. for qualified applicants across all loan types.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Your financial data is protected with 256-bit encryption and multi-factor authentication, ensuring complete peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Loan Products</h2>
+                <p>Tailored financial solutions designed to meet your unique needs and aspirations</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Excellence Loan</h3>
+                    <p>Flexible financing for life's important moments</p>
+                    <div class="product-details">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Loan Amount: S$5,000 - S$200,000</li>
+                            <li><i class="fas fa-check-circle"></i> Interest Rate: 4.5% - 9.8% p.a.</li>
+                            <li><i class="fas fa-check-circle"></i> Flexible Terms: 1-7 years</li>
+                            <li><i class="fas fa-check-circle"></i> No Collateral Required</li>
+                            <li><i class="fas fa-check-circle"></i> Disbursement within 6 hours</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Business Growth Loan</h3>
+                    <p>Fuel your entrepreneurial dreams with capital</p>
+                    <div class="product-details">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Loan Amount: S$20,000 - S$2,000,000</li>
+                            <li><i class="fas fa-check-circle"></i> Interest Rate: 3.8% - 7.5% p.a.</li>
+                            <li><i class="fas fa-check-circle"></i> Terms: 6 months - 10 years</li>
+                            <li><i class="fas fa-check-circle"></i> Working Capital & Expansion</li>
+                            <li><i class="fas fa-check-circle"></i> Special SME Support Programs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education Advancement Loan</h3>
+                    <p>Invest in your future with specialized education financing</p>
+                    <div class="product-details">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Loan Amount: S$10,000 - S$150,000</li>
+                            <li><i class="fas fa-check-circle"></i> Interest Rate: 4.2% - 6.5% p.a.</li>
+                            <li><i class="fas fa-check-circle"></i> Repayment Grace Period Available</li>
+                            <li><i class="fas fa-check-circle"></i> Covers Local & Overseas Programs</li>
+                            <li><i class="fas fa-check-circle"></i> Co-signer Options Available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loan Calculator</h2>
+                <p>Plan your finances with precision using our advanced loan calculator</p>
+            </div>
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="loan-amount">Loan Amount (SGD)</label>
+                        <input type="range" id="loan-amount" min="5000" max="500000" step="5000" value="100000" class="form-control">
+                        <div class="range-value" id="loan-amount-value">S$100,000</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-term">Loan Term (Months)</label>
+                        <input type="range" id="loan-term" min="6" max="84" step="6" value="36" class="form-control">
+                        <div class="range-value" id="loan-term-value">36 Months</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Interest Rate (%)</label>
+                        <input type="range" id="interest-rate" min="3" max="15" step="0.1" value="5.5" class="form-control">
+                        <div class="range-value" id="interest-rate-value">5.5%</div>
+                    </div>
+                </div>
+                <div class="calculator-result">
+                    <h3>Your Estimated Monthly Payment</h3>
+                    <div class="result-amount" id="monthly-payment">S$3,021</div>
+                    <div class="result-details">
+                        <p>Total Payment: <span id="total-payment">S$108,756</span></p>
+                        <p>Total Interest: <span id="total-interest">S$8,756</span></p>
+                        <p>Loan Amount: <span id="display-loan-amount">S$100,000</span></p>
+                    </div>
+                    <a href="#application" class="btn">Apply For This Loan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application" id="application">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loan Application</h2>
+                <p>Begin your journey to financial freedom in just a few minutes</p>
+            </div>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="success-message">
+                <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <h3>Application Submitted Successfully!</h3>
+                <p>Thank you for your application. We have received your information and will contact you within 2 hours during business hours.</p>
+            </div>
+            
+            <!-- 方案一：使用Formspree（推荐） -->
+            <form class="application-form" id="loan-application" action="https://formspree.io/f/infinixplus111@gmail.com" method="POST">
+                <!-- 隐藏字段用于自定义邮件主题 -->
+                <input type="hidden" name="_subject" value="New Loan Application - InfinixPlus+">
+                <input type="hidden" name="_replyto" value="@email">
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="full-name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-type">Loan Type *</label>
+                        <select id="loan-type" name="loan-type" class="form-control" required>
+                            <option value="">Select loan type</option>
+                            <option value="personal">Personal Excellence Loan</option>
+                            <option value="business">Business Growth Loan</option>
+                            <option value="education">Education Advancement Loan</option>
+                            <option value="home">Home Enhancement Loan</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="loan-amount-form">Loan Amount (SGD) *</label>
+                        <input type="number" id="loan-amount-form" name="loan-amount" class="form-control" placeholder="Enter desired loan amount" min="5000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employment">Employment Status *</label>
+                        <select id="employment" name="employment" class="form-control" required>
+                            <option value="">Select employment status</option>
+                            <option value="employed">Employed</option>
+                            <option value="self-employed">Self-Employed</option>
+                            <option value="business-owner">Business Owner</option>
+                            <option value="student">Student</option>
+                            <option value="retired">Retired</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Financial Goals</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Please share details about how you plan to use the loan and your financial objectives"></textarea>
+                </div>
+                <button type="submit" class="btn" id="submit-btn" style="width: 100%;">
+                    <span id="btn-text">Submit Application</span>
+                    <span id="btn-loading" style="display: none;">
+                        <span class="spinner"></span> Processing...
+                    </span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Discover how InfinixPlus+ has helped transform financial futures</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "InfinixPlus+ provided the capital I needed to expand my catering business when traditional banks were hesitant. Their business loan came with flexible repayment terms that aligned perfectly with my cash flow. The entire process was seamless and their relationship managers are truly exceptional."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>James Soh</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I needed funds for a major home renovation project and InfinixPlus+ offered the perfect solution. The competitive interest rate saved me thousands compared to other lenders. What impressed me most was their transparency - no hidden fees or surprises. Highly recommended for anyone seeking reliable financing!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Mei Ling</h4>
+                            <p>Homeowner & Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "As a recent graduate pursuing my master's degree overseas, financing seemed like an impossible hurdle. InfinixPlus+ not only approved my education loan quickly but also provided a grace period before repayment began. Their understanding of student needs sets them apart in the financial industry."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RT</div>
+                        <div class="author-info">
+                            <h4>Rahul Tan</h4>
+                            <p>Graduate Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>InfinixPlus+</h3>
+                    <p>Singapore's premier financial solutions provider, committed to empowering individuals and businesses with innovative loan products and exceptional service since 2015.</p>
+                    <div class="contact-info">
+                        <i class="fas fa-certificate"></i>
+                        <span>Licensed by Monetary Authority of Singapore</span>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>68 Circular Road, #02-01, Singapore 049422</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+65 6868 9889</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>infinixplus111@gmail.com</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Fri: 9AM-6PM | Sat: 10AM-2PM</span>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right"></i> Loan Products</a></li>
+                        <li><a href="#calculator"><i class="fas fa-chevron-right"></i> Loan Calculator</a></li>
+                        <li><a href="#application"><i class="fas fa-chevron-right"></i> Apply Now</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <p>Stay updated with our latest loan products and financial tips.</p>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn" style="margin-top: 10px; width: 100%;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 InfinixPlus+. All rights reserved. | Licensed Moneylender under Singapore Law</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loan Calculator Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const loanAmountSlider = document.getElementById('loan-amount');
+            const loanAmountValue = document.getElementById('loan-amount-value');
+            const loanTermSlider = document.getElementById('loan-term');
+            const loanTermValue = document.getElementById('loan-term-value');
+            const interestRateSlider = document.getElementById('interest-rate');
+            const interestRateValue = document.getElementById('interest-rate-value');
+            const monthlyPayment = document.getElementById('monthly-payment');
+            const totalPayment = document.getElementById('total-payment');
+            const totalInterest = document.getElementById('total-interest');
+            const displayLoanAmount = document.getElementById('display-loan-amount');
+            
+            function formatCurrency(amount) {
+                return new Intl.NumberFormat('en-SG', {
+                    style: 'currency',
+                    currency: 'SGD',
+                    minimumFractionDigits: 0
+                }).format(amount);
+            }
+            
+            function calculateLoan() {
+                const principal = parseFloat(loanAmountSlider.value);
+                const months = parseFloat(loanTermSlider.value);
+                const annualRate = parseFloat(interestRateSlider.value);
+                const monthlyRate = annualRate / 100 / 12;
+                
+                // Calculate monthly payment
+                let payment;
+                if (monthlyRate === 0) {
+                    payment = principal / months;
+                } else {
+                    payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+                }
+                
+                const total = payment * months;
+                const interest = total - principal;
+                
+                monthlyPayment.textContent = formatCurrency(payment);
+                totalPayment.textContent = formatCurrency(total);
+                totalInterest.textContent = formatCurrency(interest);
+                displayLoanAmount.textContent = formatCurrency(principal);
+            }
+            
+            loanAmountSlider.addEventListener('input', function() {
+                loanAmountValue.textContent = formatCurrency(this.value);
+                calculateLoan();
+            });
+            
+            loanTermSlider.addEventListener('input', function() {
+                loanTermValue.textContent = this.value + ' Months';
+                calculateLoan();
+            });
+            
+            interestRateSlider.addEventListener('input', function() {
+                interestRateValue.textContent = this.value + '%';
+                calculateLoan();
+            });
+            
+            // Initialize calculator
+            calculateLoan();
+            
+            // Form submission with Formspree
+            document.getElementById('loan-application').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = document.getElementById('submit-btn');
+                const btnText = document.getElementById('btn-text');
+                const btnLoading = document.getElementById('btn-loading');
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline';
+                
+                // Get form data
+                const formData = new FormData(this);
+                
+                // Send to Formspree
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success message
+                        document.getElementById('success-message').style.display = 'block';
+                        this.reset();
+                        
+                        // Scroll to success message
+                        document.getElementById('success-message').scrollIntoView({ 
+                            behavior: 'smooth' 
+                        });
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    alert('Sorry, there was an error submitting your application. Please try again or contact us directly at +65 6868 9889.');
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                });
+            });
+            
+            // Mobile menu toggle
+            document.getElementById('mobile-menu').addEventListener('click', function() {
+                document.getElementById('nav-menu').classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('nav-menu').classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
